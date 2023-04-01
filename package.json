@@ -36,7 +36,7 @@
  ],
  "scripts": {
   "postinstall": "electron-builder install-app-deps",
-  "start": "electron .",
+  "start": "electron --no-sandbox .",
   "compiler": "build --linux --x64",
   "publier": "build --win --ia32 -p always",
   "rebuild": "electron-rebuild -f -w serialport"
@@ -151,14 +151,15 @@
  "devDependencies": {
   "electron": "^7.3.3",
   "electron-builder": "20.39.0",
-  "electron-installer-dmg": "^3.0.0",
   "electron-installer-debian": "^3.1.0",
+  "electron-installer-dmg": "^3.0.0",
   "electron-rebuild": "^2.3.5"
  },
  "dependencies": {
   "ajv": "^6.10.0",
   "child_process": "1.0.2",
   "electron-updater": "^4.0.6",
+  "fs.promises": "^0.1.2",
   "serialport": "^9.2.0",
   "tableify": "^1.1.0"
  }
